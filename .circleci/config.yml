@@ -19,11 +19,13 @@ jobs:
     docker:
       - image: cimg/base:current
     steps:
+
       - run:
           name: Deploy to Render Staging
           command: |
             echo "Deploying to Render Staging"
             curl $RENDER_STAGING_DEPLOYHOOK
+
 
 workflows:
   run-tests-and-deploy-to-staging:
